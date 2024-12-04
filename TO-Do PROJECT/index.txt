@@ -1,0 +1,7 @@
+ Install thimgs
+
+ npm init -y
+
+ npm i express
+
+ npm i cookie-parser mongoose bcrypt dotenv multer express-async-handler
