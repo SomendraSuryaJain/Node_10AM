@@ -7,9 +7,14 @@ const userRoutes=require("./routes/users.routes");
 connectDB();
 
 const app=express();
-app.use(express.urlencoded({extended:true}));
+
+//middleware
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use("/users/v1",userRoutes);
+app.use(cookieParser());
+
+//routes middleware
+app.use("/users/v1",userRoutes); // "/users/v1" ===> static path / api versioning
 
 // ?  "/users/v1"--->static path 
 

@@ -1,7 +1,9 @@
-require("dotenv").config()
+require("dotenv").config();
 
 
-module.exports={
+module.exports = {
     PORT:process.env.PORT,
     MONGODB_LOCAL:process.env.MONGODB_LOCAL,
+    JWT_SECRET: process.env.JWT_SECRET,
+    JWT_TOKEN
 };
